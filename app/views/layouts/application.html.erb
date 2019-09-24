@@ -1,14 +1,22 @@
-  <!-- HTML code above -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ideator</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-  <div id = "wrap">
-   <%= render 'shared/nav' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-
+  <body>
+      <div id = "wrap">
+    <%= render 'shared/nav' %>
     <%= yield %>
-    
-  </div><!-- wrap -->
+  </div>
+    <div class="footer text-center">
+      <%= render 'shared/foot' %>
+    </div>
 
-<%= render ' shared/foot' %> 
-
-</body>
-</html
+  </body>
+</html>
