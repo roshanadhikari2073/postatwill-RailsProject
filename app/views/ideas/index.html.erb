@@ -1,8 +1,10 @@
+
 <%= simple_form_for Idea.new do |f| %>
 <%= f.input :description %>
 <%= f.input :author %>
 <%= f.submit 'Submit', class: 'btn btn-primary' %>
 <% end %>
+
 <% @ideas.each do |idea| %>
 <div class="panel panel-default">
 	<div class="panel-body">
@@ -10,6 +12,11 @@
 			<p><%= idea.description %></p>
 			<small>by <%= idea.author %></small>
 		</blockquote>
+		<br>
+	<!-- 	here we are creating the delete link with the path described as the idea_path given and () idea is specifying which idea we are deleting the form plus the method is creating the delete method in the rails class is defining the button structure and the data is creating the pop up  -->
+		<%= link_to 'Delete' , idea_path(idea) , method: :delete %>
+		      <%= link_to 'Revise', edit_idea_path(idea), class: 'btn btn-sm btn-success' %>
+
 	</div>
 </div>
 <% end %>
