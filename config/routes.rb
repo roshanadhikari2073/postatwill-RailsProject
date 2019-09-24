@@ -5,6 +5,6 @@ Rails.application.routes.draw do
   # this function gets the about from the http response and the rocketsybmbol denotes to redirect to the static pages with action about
   get 'about' => 'static_pages#about'
   # this function takes the random and same working principle as above 
-  get ' random ' => 'static_pages#random'
+  get 'random' => 'static_pages#random'
 
 end

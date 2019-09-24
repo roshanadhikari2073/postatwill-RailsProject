@@ -9,12 +9,11 @@ class IdeasController < ApplicationController
     #creating a new create idea using the create function by hitting to the idea model 
 		@ideas = Idea.create(idea_params)
     if @idea.valid?
-      #implementation
+      redirect_to root_path
     else 
-      #implementation 
+      render 'new' 
     end
 
-		redirect_to root_path
 	end
 
   #editing the ideas by 
