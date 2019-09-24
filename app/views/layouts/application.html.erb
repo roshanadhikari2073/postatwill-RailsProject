@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Ideator</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+  <!-- HTML code above -->
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <div id = "wrap">
+   <%= render 'shared/nav' %>
 
-  <body>
+
     <%= yield %>
-  </body>
-</html>
+    
+  </div><!-- wrap -->
+
+<%= render ' shared/foot' %> 
+
+</body>
+</html
