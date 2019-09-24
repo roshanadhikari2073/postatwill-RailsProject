@@ -1,25 +1,12 @@
-# README
+## Ideator 
+This app was created as a test project for the ruby on rails development training. 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### App contains the following things 
+*Create Ideas 
+*Update Ideas 
+*Delete Ideas 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# idearuby
+### Major things learnt 
+-the idea of mvc 
+-the idea of rails frameworkds
+-the idea of
