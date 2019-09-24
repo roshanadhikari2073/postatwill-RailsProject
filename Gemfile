@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 #added bootstrap gem file for the front end desgin of the application 
-gem 'bootstrap-sass' , '~> 3.3.6'
+gem 'bootstrap-sass' , '~> 3.4.1'
 gem 'pry', '~> 0.12.2'
 
 #gem file simple form to create the form for our ideas pages
