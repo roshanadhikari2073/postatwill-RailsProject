@@ -2,17 +2,18 @@ class IdeasController < ApplicationController
 
 	def index 
 		# assiging the ideas object the all ideas table content from the datbase
-		@ideas = Idea.all
+		@ideas = Idea.order("created_at DESC").paginate(:page => params[:page], :per_page => 10 )
 	end 
 
 	def create 
     #creating a new create idea using the create function by hitting to the idea model 
 		@ideas = Idea.create(idea_params)
-    if @idea.valid?
-      redirect_to root_path
-    else 
-      render 'new' 
+     if @idea.valid?
+      flash[:success] = "Your idea has been posted!"
+    else
+      flash[:alert] = "Woops! Looks like there has been an error!"
     end
+    redirect_to root_path
 
 	end
 
@@ -27,8 +28,10 @@ class IdeasController < ApplicationController
   def update 
     @ideas = Idea.find(params[:id])
     if @ideas.update( idea_params )
+      flash[:success] = " The idea has been udpated"
       redirect_to root_path
     else
+      flash[:alert] = " whoops error"
       redirect_to edit_idea_path(params[:id])
     end
   end
@@ -38,6 +41,7 @@ class IdeasController < ApplicationController
   def destroy 
     @idea = Idea.find(params[:id])
     @idea.destroy
+    flash[:success] = "The idea was successfully deleted!"
     redirect_to root_path
   end
 
